@@ -1,0 +1,39 @@
+@import "./colors.scss";
+
+.calendar {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 236px;
+  }
+
+  &-table {
+    margin-top: 15px;
+    .day {
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: rgb(227, 227, 227);
+      }
+
+      &:active,
+      &.active {
+        background-color: $accent;
+        color: white;
+      }
+    }
+  }
+
+  .arrows {
+    display: flex;
+    gap: 15px;
+  }
+
+  .monthYear {
+    line-height: 32px;
+  }
+}

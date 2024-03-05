@@ -1,0 +1,96 @@
+@import "./colors.scss";
+
+#events {
+  table {
+    padding-left: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; // Set table layout to fixed
+
+    th,
+    td {
+      border: 1px solid #ccc;
+    }
+  }
+
+  .hour {
+    position: relative;
+    font-size: 10px;
+    text-align: left;
+
+    &-cell {
+      position: relative;
+      height: 32px;
+      border: none;
+      width: 48px;
+      min-width: 48px;
+      white-space: nowrap;
+    }
+
+    &-title {
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translate(50%, 50%);
+    }
+  }
+
+  .day {
+    border: none;
+    padding-bottom: 8px;
+
+    &-name {
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    &-number {
+      font-size: 18px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .event {
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 1;
+
+      position: absolute;
+      overflow: hidden;
+      width: 90%;
+      border-radius: 4px;
+      background-color: $accent;
+      left: 0;
+      top: 0;
+      color: white;
+      padding: 4px;
+    }
+
+    &-title,
+    &-time {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-menu {
+      z-index: 2;
+      position: absolute;
+      left: 90%;
+      top: 0;
+    }
+  }
+
+  .addEvent {
+    &-form {
+      width: auto;
+      padding: 5px;
+    }
+  }
+}

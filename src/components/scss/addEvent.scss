@@ -1,0 +1,65 @@
+@import "./colors.scss";
+
+.addEvent {
+  position: relative;
+
+  .closeButton {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: $dark-gray; // Use color variable
+  }
+
+  &-form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="time"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid $light-gray; // Use color variable
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $accent; // Use color variable
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($accent, 10%); // Darken color on hover
+        }
+
+        &:active {
+          background-color: darken(
+            $accent,
+            20%
+          ); // Further darken color on click
+        }
+      }
+    }
+  }
+}
